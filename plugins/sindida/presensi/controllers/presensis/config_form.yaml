@@ -1,0 +1,19 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Presensi
+modelClass: Sindida\Presensi\Models\Presensi
+form: $/sindida/presensi/models/presensi/fields.yaml
+defaultRedirect: sindida/presensi/presensis
+
+create:
+    title: Tambah Presensi
+    redirect: sindida/presensi/presensis/update/:id
+    redirectClose: sindida/presensi/presensis
+
+update:
+    title: Edit Presensi
+    redirect: sindida/presensi/presensis
+    redirectClose: sindida/presensi/presensis

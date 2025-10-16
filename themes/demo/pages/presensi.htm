@@ -1,0 +1,50 @@
+title = "Presensi"
+url = "/presensi"
+layout = "default"
+
+[presensiForm]
+==
+
+{% if pegawai %}
+    <div style="max-width:400px; margin:50px auto; padding:20px; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.1); background:#fff; text-align:center; font-family:sans-serif;">
+
+        <h2 style="margin-bottom:20px; color:#333;">Halo, {{ pegawai.name }}</h2>
+
+        {% if presensi %}
+            <p style="margin:8px 0;">
+                Tanggal: {{ presensi.tanggal|date("d-m-Y") }} <br>
+                Jam Masuk: {{ presensi.jam_masuk }} 
+            </p>
+
+            <p style="margin:8px 0;">
+                Jam Pulang: {{ presensi.jam_pulang ?: '-' }} 
+            </p>
+
+
+            {% if not presensi.jam_pulang %}
+                <form data-request="presensiForm::onPulang" style="margin:10px 0;">
+                    <button type="submit" style="padding:10px 15px; border:none; border-radius:8px; background:#fdcb6e; color:#fff; font-weight:600; cursor:pointer; width:100%; transition:0.3s;">
+                        Absen Pulang
+                    </button>
+                </form>
+            {% endif %}
+
+            {% else %}
+                <form data-request="presensiForm::onPresensi" style="margin:10px 0;">
+                    <button type="submit" style="padding:10px 15px; border:none; border-radius:8px; background:#00b894; color:#fff; font-weight:600; cursor:pointer; width:100%; transition:0.3s;">
+                        Absen Masuk
+                    </button>
+                </form>
+            {% endif %}
+
+            <form data-request="presensiForm::onLogout" style="margin:10px 0;">
+                <button type="submit" style="padding:10px 15px; border:none; border-radius:8px; background:#d63031; color:#fff; font-weight:600; cursor:pointer; width:100%; transition:0.3s;">
+                    Logout
+                </button>
+            </form>
+        </div>
+
+{% else %}
+    <p style="text-align:center; font-family:sans-serif;">Silakan <a href="/login" style="color:#0984e3;">login</a> terlebih dahulu.</p>
+{% endif %}
+

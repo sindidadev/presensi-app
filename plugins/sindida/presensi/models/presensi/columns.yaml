@@ -1,0 +1,19 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    pegawai:
+        label: Pegawai
+        relation: pegawai
+        select: name
+
+    tanggal:
+        label: Tanggal
+        sortable: true
+
+    jam_masuk:
+        label: Jam Masuk
+
+    jam_pulang:
+        label: Jam Pulang

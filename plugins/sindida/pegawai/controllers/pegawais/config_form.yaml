@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'sindida.pegawai::lang.models.pegawai.label'
+
+# Model Form Field configuration
+form: $/sindida/pegawai/models/pegawai/fields.yaml
+
+# Model Class name
+modelClass: Sindida\Pegawai\Models\Pegawai
+
+# Default redirect location
+defaultRedirect: sindida/pegawai/pegawais
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: sindida/pegawai/pegawais/update/:id
+    redirectClose: sindida/pegawai/pegawais
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: sindida/pegawai/pegawais
+    redirectClose: sindida/pegawai/pegawais
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

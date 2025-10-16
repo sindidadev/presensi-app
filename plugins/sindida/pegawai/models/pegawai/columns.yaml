@@ -1,0 +1,17 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+        sortable: true
+
+    name:
+        label: Nama Pegawai
+        searchable: true
+
+    email:
+        label: Email
+        searchable: true

@@ -1,0 +1,19 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Nama Pegawai
+        type: text
+        span: auto
+
+    email:
+        label: Email
+        type: text
+        span: auto
+
+    password:
+        label: Password
+        type: password
+        span: auto

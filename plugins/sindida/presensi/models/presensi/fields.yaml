@@ -1,0 +1,26 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    pegawai:
+        label: Pegawai
+        type: relation
+        nameFrom: name
+        span: auto
+
+    tanggal:
+        label: Tanggal
+        type: datepicker
+        mode: date
+        span: auto
+
+    jam_masuk:
+        label: Jam Masuk
+        type: datepicker
+        mode: time
+
+    jam_pulang:
+        label: Jam Pulang
+        type: datepicker
+        mode: time
