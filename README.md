@@ -18,6 +18,8 @@ Aplikasi presensi pegawai sederhana berbasis wintercms.
 ## Route
 1. login pegawai : http://127.0.0.1:8000/login
 2. login admin : http://127.0.0.1:8000/backend/backend/auth/signin
+   user : admin
+   pw : admin123
 
 ## DATABASE
 MYSQL
